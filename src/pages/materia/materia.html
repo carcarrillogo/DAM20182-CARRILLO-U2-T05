@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>MateriaPage</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card #myCard *ngFor="let materia of materiasrest.materias">
+    <img [src]="materia.foto" />
+    <ion-card-content>
+      <ion-card-title>
+        {{materia.nombre}}
+      </ion-card-title>
+      <p>
+        {{materia.descripcion}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
